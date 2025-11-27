@@ -1,0 +1,45 @@
+@use '@/styles/abstracts/variables' as *;
+@use '@/styles/abstracts/mixins' as *;
+
+.contact {
+    padding: var(--spacing-2xl) 0;
+    background-color: var(--color-surface);
+    min-height: 100vh;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 0 var(--spacing-md);
+    }
+
+    &__header {
+        text-align: center;
+        margin-bottom: var(--spacing-2xl);
+
+        h2 {
+            font-size: var(--font-size-2xl);
+            font-weight: 700;
+            margin-bottom: var(--spacing-md);
+        }
+
+        p {
+            color: var(--color-text-muted);
+            font-size: var(--font-size-lg);
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-lg);
+        background-color: var(--color-background);
+        padding: var(--spacing-xl);
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-sm);
+        border: 1px solid var(--color-border);
+    }
+}

@@ -1,0 +1,56 @@
+@use '@/styles/abstracts/variables' as *;
+
+.accordion {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    width: 100%;
+
+    &__item {
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-md);
+        background-color: var(--color-background);
+        overflow: hidden;
+    }
+
+    &__trigger {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: var(--spacing-md);
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: var(--font-size-base);
+        font-weight: 500;
+        color: var(--color-text);
+        text-align: left;
+        transition: background-color 0.2s;
+
+        &:hover {
+            background-color: var(--color-surface);
+        }
+    }
+
+    &__icon {
+        transition: transform 0.2s ease;
+        color: var(--color-text-muted);
+
+        &--open {
+            transform: rotate(180deg);
+        }
+    }
+
+    &__content {
+        height: 0;
+        overflow: hidden;
+        transition: height 0.3s ease-out;
+
+        &-inner {
+            padding: 0 var(--spacing-md) var(--spacing-md);
+            color: var(--color-text-muted);
+            line-height: 1.6;
+        }
+    }
+}

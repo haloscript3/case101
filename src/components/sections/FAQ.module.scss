@@ -1,0 +1,33 @@
+@use '@/styles/abstracts/variables' as *;
+
+.faq {
+    padding: var(--spacing-2xl) 0;
+    background-color: var(--color-background);
+    min-height: 100vh;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 var(--spacing-md);
+    }
+
+    &__header {
+        text-align: center;
+        margin-bottom: var(--spacing-2xl);
+
+        h2 {
+            font-size: var(--font-size-2xl);
+            font-weight: 700;
+            margin-bottom: var(--spacing-md);
+        }
+
+        p {
+            color: var(--color-text-muted);
+            font-size: var(--font-size-lg);
+        }
+    }
+}
